@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+open boxes
+"""
+
+
 def canUnlockAll(boxes):
     if not boxes or not boxes[0]:
         return False
