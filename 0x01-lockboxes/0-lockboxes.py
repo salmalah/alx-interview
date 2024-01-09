@@ -1,11 +1,13 @@
 #!/usr/bin/python3
+"""
+open boxes
+"""
+
 
 def canUnlockAll(boxes):
     """
-    Determine if all boxes can be opened.
-
-    :param boxes: A list of lists representing boxes and their keys.
-    :return: True if all boxes can be opened, False otherwise.
+    This is a   method that determines
+    if all the boxes can be opened
     """
     if not boxes or not boxes[0]:
         return False
