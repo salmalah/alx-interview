@@ -1,27 +1,22 @@
 #!/usr/bin/python3
 """
-open boxes
+this module is open boxes
 """
 
 
 def canUnlockAll(boxes):
     """
-    This is a   method that determines
-    if all the boxes can be opened
+    This is a  method that determines if all the boxes can be opened
     """
-    if not boxes or not boxes[0]:
-        return False
+    box_s = set(boxes[0])
+    for f in boxes[0]:
+        if f < len(boxes):
+            box_s.update(boxes[f])
 
-    n = len(boxes)
-    visited = set()
-    queue = [0]
+    for e in range(1, len(boxes)):
+        if e in box_s:
+            box_s.update(boxes[e])
+        else:
+            return False
 
-    while queue:
-        current_box = queue.pop(0)
-        visited.add(current_box)
-
-        for key in boxes[current_box]:
-            if key < n and key not in visited:
-                queue.append(key)
-
-    return len(visited) == n
+    return True
