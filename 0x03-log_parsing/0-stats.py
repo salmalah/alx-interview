@@ -22,7 +22,7 @@ try:
 
         if coun == 10:
             coun= 0
-            print('File size: {}'.format(total_size))
+            print('File size: {}'.format(total_s))
             for key, value in sorted(cache.items()):
                 if value != 0:
                     print('{}: {}'.format(key, value))
