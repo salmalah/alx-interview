@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''This module is to define a script that reads stdin line by line and computes metrics'''
+'''This module is to define a script that reads stdin line'''
 
 
 import sys
