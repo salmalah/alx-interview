@@ -5,6 +5,7 @@ N Queens problem solution
 
 import sys
 
+
 def is_safe(board, row, col):
     """
     Check if it's safe to place a queen at position (row, col)
@@ -15,6 +16,7 @@ def is_safe(board, row, col):
            board[i] + i == row + col:
             return False
     return True
+
 
 def solve_queens(board, col, n, solutions):
     """
@@ -28,12 +30,14 @@ def solve_queens(board, col, n, solutions):
             board[col] = row
             solve_queens(board, col + 1, n, solutions)
 
+
 def print_solutions(solutions):
     """
     Print the solutions
     """
     for solution in solutions:
         print(solution)
+
 
 def main():
     """
@@ -57,6 +61,7 @@ def main():
     solutions = []
     solve_queens(board, 0, n, solutions)
     print_solutions(solutions)
+
 
 if __name__ == "__main__":
     main()
