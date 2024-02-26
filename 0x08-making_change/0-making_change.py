@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """
-This Moduleis to define 
+This Moduleis to define
 change with the fewest number of coins
 """
+
 
 def makeChange(coins, total):
     """
