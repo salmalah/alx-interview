@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-This Moduleis to define
-change with the fewest number of coins
+This Module is to define change with the fewest number of coins
 """
 
 
@@ -13,6 +12,8 @@ def makeChange(coins, total):
     """
     if total <= 0:
         return 0
+
+    coins.sort(reverse=True)  # Sort coins in descending order
 
     dp = [float('inf')] * (total + 1)
     dp[0] = 0
