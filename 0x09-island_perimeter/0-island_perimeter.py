@@ -21,7 +21,7 @@ def island_perimeter(grid):
             edges = (
                 o == 0 or (len(grid[o - 1]) > l and grid[o - 1][l] == 0),
                 l == m - 1 or (m > l + 1 and row[l + 1] == 0),
-                i == n - 1 or (len(grid[o + 1]) > l and grid[o + 1][l] == 0),
+                o == n - 1 or (len(grid[o + 1]) > l and grid[o + 1][l] == 0),
                 l == 0 or row[l - 1] == 0,
             )
             perimet += sum(edges)
