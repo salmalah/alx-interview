@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Prime game module"""
+"""Prime game code"""
+
 
 def if_Prime(n):
     """Checks if a number is prime."""
@@ -16,13 +17,15 @@ def if_Prime(n):
         i += 6
     return True
 
-def get_Prime_count(num):
-    """Counts the prime numbers up to a given number."""
+
+def get_Prime(num):
+    """gets the prime numbers in a list."""
     count = 0
-    for n in range(1, num + 1):
-        if if_Prime(n):
+    for num in num:
+        if if_Prime(num):
             count += 1
     return count
+
 
 def isWinner(x, nums):
     """Determines who the winner of the game is."""
@@ -30,15 +33,14 @@ def isWinner(x, nums):
     maria = 0
     if x <= 0 or not nums:
         return None
-    for num in nums:
-        prime_count = get_Prime_count(num)
-        if prime_count % 2 == 0:
+    for num in range(x):
+        num_arr = [n for n in range(1, nums[num] + 1)]
+        if get_Prime(num_arr) % 2 == 0:
             ben += 1
         else:
             maria += 1
     if ben > maria:
         return "Ben"
-    elif maria > ben:
-        return "Maria"
-    else:
+    if ben == maria:
         return None
+    return "Maria"
