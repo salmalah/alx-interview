@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-""" 
-This module is to define Prime game code
-"""
+"""Prime game code"""
 
 
 def if_Prime(n):
-    """
-    Checks if a number is prime
-    """
+    """Checks if a number is prime."""
     if n <= 1:
         return False
     elif n <= 3:
@@ -23,9 +19,7 @@ def if_Prime(n):
 
 
 def get_Prime(num):
-    """
-    gets the prime numbers in a list
-    """
+    """gets the prime numbers in a list."""
     count = 0
     for num in num:
         if if_Prime(num):
@@ -34,9 +28,7 @@ def get_Prime(num):
 
 
 def isWinner(x, nums):
-    """
-    Determines who the winner of the game is
-    """
+    """Determines who the winner of the game is."""
     ben = 0
     maria = 0
     if x <= 0 or not nums:
